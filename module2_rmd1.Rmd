@@ -3,12 +3,12 @@ title: "Module2-R Markdown Document 1"
 author: "Jiaqi Zou"
 date: "2020/9/29"
 output:
-  word_document: default
   html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # This is a level 1 header
@@ -29,10 +29,12 @@ When we compile our document, we are using the `rmarkdown` package.
 
 Here are some example R commands:
 
-```
+
+```{r}
 1+2
 mean(c(1,2,3,4,5))
 ```
+
 Here is an example of a non-numbered list:
 
 * Breakfast
@@ -81,6 +83,11 @@ Here is an example of a nested blockquote:
 >
 > > This text is nested
 
+```{r}
+
+```
+
+
 
 Here is an example of code in a blockquote:
 
@@ -104,3 +111,16 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, echo=FALSE, fig.height=4, fig.width=4}
+plot(pressure)
+```
+
+
+## Insert tables
+
+```{r}
+knitr::kable(head(cars),
+       caption="Top 6 row of Cars Dataset")
+```
+
