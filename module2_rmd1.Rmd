@@ -124,3 +124,21 @@ knitr::kable(head(cars),
        caption="Top 6 row of Cars Dataset")
 ```
 
+## Insert images
+
+Here is an image inserted
+
+![sunstar](sunstar.png)
+
+## Insert an animated GIF and Video
+![sunstar](sunstar.gif)
+![sunstar](sunstar.mp4)
+
+## Insert text with some footnotes
+
+Here is footnote reference [^1] and another [^longnote]
+
+Here is an inline foot note ^[Inline notes are easier to write.]
+
+[^1]: Here is the footnote
+[^longnote]: Here's one with multiple blocks.
